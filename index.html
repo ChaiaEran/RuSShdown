@@ -48,11 +48,13 @@
                     <p>
                         <input type="datetime-local" name="pubdate" id="pubdatenew" required>
                     </p>
-                    <div class="flex">
-                        <textarea name="post" id="postnew" onkeyup="previewText('postnew', 'previewnew')"
-                            placeholder="post body (accepts markdown!)" rows="20" cols="50" required></textarea>
-                        <div id="previewnew" class="preview"></div>
-                    </div>
+                    <p>
+                        <div class="flex">
+                            <textarea name="post" id="postnew" onkeyup="previewText('postnew', 'previewnew')"
+                                placeholder="post body (accepts markdown!)" rows="20" cols="50" required></textarea>
+                            <div id="previewnew" class="preview"></div>
+                        </div>
+                    </p>
                     <button type="submit">Generate RSS Feed</button>
                 </form>
             </div>

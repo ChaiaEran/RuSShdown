@@ -101,3 +101,14 @@ textarea{
     text-wrap: wrap;
     overflow-y: scroll;
 }
+
+button{
+    color: black;
+    background: #e58f3e;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+button:hover{
+    background: #ffab5c;
+}
