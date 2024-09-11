@@ -21,7 +21,7 @@ body {
 
 .infobox {
     margin: 1%;
-    border: 1px solid #4a4847;
+    border: 1px solid #e58f3e;
     border-radius: 10px;
     padding: 0.5%;
     display: inline-block;
@@ -92,7 +92,8 @@ body {
 input{
     background: #191919;
     color: white;
-    border: 1px solid #4a4847
+    border: 1px solid #4a4847;
+    font-family: Atkinson Hyperlegible;
 }
 
 input[type="file"]{
@@ -116,7 +117,8 @@ textarea{
     background: #191919;
     color: white;
     resize: none;
-    border: 1px solid #4a4847
+    border: 1px solid #4a4847;
+    font-family: Atkinson Hyperlegible;
 }
 
 .flex {
@@ -128,8 +130,8 @@ textarea{
 .preview {
     border: 1px solid #4a4847;
     background: #191919;
-    width: 25rem;
-    height: 20rem;
+    width: 35rem;
+    height: 40rem;
     text-wrap: wrap;
     overflow-y: scroll;
 }
