@@ -53,9 +53,10 @@
                     </p>
                     <p>
                         <div class="flex">
-                            <textarea name="post" id="postnew" onkeyup="previewText('postnew', 'previewnew')"
+                            <textarea name="post" id="postnew" onkeyup="previewText('postnew', 'previewnew', 'htmlnew')"
                                 placeholder="post body (accepts markdown!)" rows="20" cols="50" required></textarea>
                             <div id="previewnew" class="preview"></div>
+                            <textarea id="htmlnew" rows="20" cols="50" readonly></textarea>
                         </div>
                     </p>
                     <button type="submit">Generate RSS Feed</button>
@@ -88,9 +89,10 @@
                     </p>
                     <p>
                     <div class="flex">
-                        <textarea name="post" id="postadd" onkeyup="previewText('postadd', 'previewadd')"
+                        <textarea name="post" id="postadd" onkeyup="previewText('postadd', 'previewadd', 'htmladd')"
                             placeholder="post body (accepts markdown!)" rows="20" cols="50" required></textarea>
                         <div id="previewadd" class="preview"></div>
+                        <textarea id="htmladd" rows="20" cols="50" readonly></textarea>
                     </div>
                     </p>
                     <button type="submit">Post!</button>

@@ -75,10 +75,13 @@ function appendPost() {
     reader.readAsText(rawFeed)
 }
 
-function previewText(textBox, previewBox) {
+function previewText(textBox, previewBox, htmlBox) {
     input = document.getElementById(textBox)
-    output = document.getElementById(previewBox)
-    output.innerHTML = converter.makeHtml(input.value)
+    output1 = document.getElementById(previewBox)
+    output2 = document.getElementById(htmlBox)
+    inputHtml = converter.makeHtml(input.value)
+    output1.innerHTML = inputHtml
+    output2.innerText = inputHtml
 }
 
 function setFileName(){
