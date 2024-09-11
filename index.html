@@ -69,7 +69,8 @@
                 <form id="addpost" name="addpost" action="javascript:appendPost()">
                     <p>
                         <label for="rssfeedadd" class="filebox">Upload your RSS Feed</label>
-                        <input type="file" id="rssfeedadd" name="rssfeed" accept=".xml,.rss" required>
+                        <input type="file" id="rssfeedadd" onchange="setFileName()" name="rssfeed" accept=".xml,.rss" required>
+                        <span id="filename"></span>
                     </p>
                     <p>
                         <input type="text" placeholder="headline" name="title" id="titleadd" size="50" required>

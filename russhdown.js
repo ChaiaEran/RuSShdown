@@ -80,3 +80,9 @@ function previewText(textBox, previewBox) {
     output = document.getElementById(previewBox)
     output.innerHTML = converter.makeHtml(input.value)
 }
+
+function setFileName(){
+    const file = document.getElementById("rssfeedadd")
+    const filenameSpace = document.getElementById("filename")
+    filenameSpace.innerText = file.files[0].name
+}
