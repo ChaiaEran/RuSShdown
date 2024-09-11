@@ -6,4 +6,4 @@ RuSShdown lets you make an RSS feed without touching a single line of code, with
 RuSShdown works in your browser, uses absolutely no cookies, and runs 100% client-side. You can download the source code and pore through it yourself, if you'd like.
 
 Made by:   
-![Chaia Eran: Cute as Hell, Queer AF](https://chaiaeran.neocities.org/imgs/chaia.png)
+[![Chaia Eran: Cute as Hell, Queer AF](https://chaiaeran.neocities.org/imgs/chaia.png)](https://chaiaeran.neocities.org)
