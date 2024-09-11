@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>RuSShdown RSS Feed Generator</title>
+    <script src="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"></script>
+    <script src="russhdown.js"></script>
+    <link rel="stylesheet" href="russhdown.css" />
+</head>
+
+<body>
+    <h1 class="header">RuSShdown</h1>
+    <h2>An RSS feed generator for non-coders</h2>
+    <h3>Part of the <span style="color: #e58f3e;">Eggbug Memorial RSS Feed Project</span> <img style="vertical-align:bottom;" src="eggbug.png" alt="Eggbug!"></h3>
+    <ul class="tabs" role="tablist">
+        <li>
+            <input type="radio" name="tabs" id="tab1" checked />
+            <label for="tab1" role="tab" aria-selected="true" aria-controls="panel1" tabindex="0">Create New RSS Feed</label>
+            <div id="tab-content1" class="tab-content" role="tabpanel" aria-labelledby="createnewrssfeed" aria-hidden="false">
+                <form id="newxml" name="newxml" action="javascript:generateNewFeed()">
+                    <p>
+                        <label for="rsstitle">RSS Title</label>
+                        <input type="text" placeholder="Your Cool RSS Feed" name="rsstitle" id="rsstitlenew" required>
+                    </p>
+                    <p>
+                        <label for="rsslink">Website Link</label>
+                        <input type="text" placeholder="https://yourwebsitehere.com" name="rsslink" id="rsslinknew" size="38"
+                            required>
+                    </p>
+                    <p>
+                        <label for="rssdescription">RSS Feed Description</label><br />
+                        <textarea name="rssdescription" id="rssdescriptionnew" placeholder="Describe your RSS feed!" cols="50"
+                            required></textarea>
+                    </p>
+                    <p>
+                        Make your first post, while you're at it!</p>
+                    <p>
+                        <input type="text" placeholder="headline" name="title" id="titlenew" size="50" required>
+                    </p>
+                    <p>
+                        <input type="text" placeholder="yourname@email.com (Your Name)" name="author" id="authornew" size="50"
+                            required>
+                    </p>
+                    <p>
+                        <input type="text" placeholder="https://yoursitehere/post-link (not required)" name="link" id="linknew"
+                            size="50">
+                    </p>
+                    <p>
+                        <input type="datetime-local" name="pubdate" id="pubdatenew" required>
+                    </p>
+                    <div class="flex">
+                        <textarea name="post" id="postnew" onkeyup="previewText('postnew', 'previewnew')"
+                            placeholder="post body (accepts markdown!)" rows="20" cols="50" required></textarea>
+                        <div id="previewnew" class="preview"></div>
+                    </div>
+                    <button type="submit">Generate RSS Feed</button>
+                </form>
+            </div>
+        </li>
+        <li>
+            <input type="radio" name="tabs" id="tab2" />
+            <label for="tab2" role="tab" aria-selected="false" aria-controls="panel2" tabindex="0">Add Post</label>
+            <div id="tab-content2" class="tab-content" role="tabpanel" aria-labelledby="addpost" aria-hidden="true">
+                <form id="addpost" name="addpost" action="javascript:appendPost()">
+                    <p>
+                        <label for="rssfeed">Upload your RSS Feed.</label>
+                        <input type="file" id="rssfeedadd" name="rssfeed" accept=".xml,.rss" required>
+                    </p>
+                    <p>
+                        <input type="text" placeholder="headline" name="title" id="titleadd" size="50" required>
+                    </p>
+                    <p>
+                        <input type="text" placeholder="yourname@email.com (Your Name)" name="author" id="authoradd" size="50"
+                            required>
+                    </p>
+                    <p></p>
+                    <input type="text" placeholder="https://yoursitehere/post-link (not required)" name="link" id="linkadd"
+                        size="50">
+                    </p>
+                    <p>
+                        <input type="datetime-local" name="pubdate" id="pubdateadd" required>
+                    </p>
+                    <p>
+                    <div class="flex">
+                        <textarea name="post" id="postadd" onkeyup="previewText('postadd', 'previewadd')"
+                            placeholder="post body (accepts markdown!)" rows="20" cols="50" required></textarea>
+                        <div id="previewadd" class="preview"></div>
+                    </div>
+                    </p>
+                    <button type="submit">Post!</button>
+                </form>
+            </div>
+        </li>
+    </ul>
+    <script>
+        previewText('postnew', 'previewnew')
+        previewText('postadd', 'previewadd')
+        var newDate = document.getElementById("pubdatenew")
+        var addDate = document.getElementById("pubdateadd")
+        var now = new Date()
+        var offset = now.getTimezoneOffset() * 60000
+        var adjustedDate = new Date(now.getTime() - offset);
+        var formattedDate = adjustedDate.toISOString().substring(0, 16);
+        newDate.value = formattedDate
+        addDate.value = formattedDate
+    </script>
+</body>
+
+</html>

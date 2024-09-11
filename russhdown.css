@@ -1,0 +1,103 @@
+@font-face {
+    font-family: Atkinson Hyperlegible;
+    src: url(Atkinson-Hyperlegible-Regular-102.ttf);
+}
+
+body {
+    color: white;
+    background: #191919;
+    font-family: Atkinson Hyperlegible;
+}
+
+.header {
+    background: #83254f;
+    margin: 0%;
+    padding: 1.5%;
+}
+
+.tabs {
+    width: 100vw;
+    float: none;
+    list-style: none;
+    position: relative;
+    margin: 80px 0 0 10px;
+    text-align: left;
+}
+
+.tabs li {
+    float: left;
+    display: block;
+}
+
+.tabs input[type="radio"] {
+    position: absolute;
+    top: 0;
+    left: -9999px;
+}
+
+.tabs label[role="tab"] {
+    display: block;
+    padding: 14px 21px;
+    border-radius: 10px 10px 0 0;
+    background: #673104;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+    top: 4px;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.tabs .tab-content {
+    z-index: 2;
+    display: none;
+    overflow: hidden;
+    font-size: 17px;
+    line-height: 25px;
+    padding: 25px;
+    position: absolute;
+    top: 53px;
+    left: 0;
+    background: black;
+    border: 1px solid #4a4847;
+    border-radius: 10px;
+}
+
+.tabs [id^="tab"]:checked+label {
+    top: 0;
+    padding-top: 17px;
+    background: #e58f3e;
+    color: black;
+}
+
+.tabs [id^="tab"]:checked~[id^="tab-content"] {
+    display: block;
+}
+
+input{
+    background: black;
+    color: white;
+}
+
+textarea{
+    background: black;
+    color: white;
+    resize: none;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.preview {
+    border: 1px solid gray;
+    width: 25rem;
+    height: 20rem;
+    text-wrap: wrap;
+    overflow-y: scroll;
+}
