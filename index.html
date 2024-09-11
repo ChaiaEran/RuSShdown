@@ -10,8 +10,11 @@
 
 <body>
     <h1 class="header">RuSShdown</h1>
-    <h2>An RSS feed generator for non-coders</h2>
-    <h3>Part of the <span style="color: #e58f3e;">Eggbug Memorial RSS Feed Project</span> <img style="vertical-align:bottom;" src="eggbug.png" alt="Eggbug!"></h3>
+    <div class="infobox">
+        <h2>An RSS feed generator for non-coders</h2>
+        <h3>Part of the <span style="color: #e58f3e;">Eggbug Memorial RSS Feed Project</span> <img style="vertical-align:bottom;" src="eggbug.png" alt="Eggbug!"></h3>
+        <h4>Created by <a href="https://chaiaeran.neocities.org" target="_blank" style="color: #e58f3e; text-decoration: none;">Chaia Eran</a></h4>
+    </div>
     <ul class="tabs" role="tablist">
         <li>
             <input type="radio" name="tabs" id="tab1" checked />
@@ -19,16 +22,16 @@
             <div id="tab-content1" class="tab-content" role="tabpanel" aria-labelledby="createnewrssfeed" aria-hidden="false">
                 <form id="newxml" name="newxml" action="javascript:generateNewFeed()">
                     <p>
-                        <label for="rsstitle">RSS Title</label>
+                        <label for="rsstitlenew">RSS Title</label>
                         <input type="text" placeholder="Your Cool RSS Feed" name="rsstitle" id="rsstitlenew" required>
                     </p>
                     <p>
-                        <label for="rsslink">Website Link</label>
+                        <label for="rsslinknew">Website Link</label>
                         <input type="text" placeholder="https://yourwebsitehere.com" name="rsslink" id="rsslinknew" size="38"
                             required>
                     </p>
                     <p>
-                        <label for="rssdescription">RSS Feed Description</label><br />
+                        <label for="rssdescriptionnew">RSS Feed Description</label><br />
                         <textarea name="rssdescription" id="rssdescriptionnew" placeholder="Describe your RSS feed!" cols="50"
                             required></textarea>
                     </p>
@@ -65,7 +68,7 @@
             <div id="tab-content2" class="tab-content" role="tabpanel" aria-labelledby="addpost" aria-hidden="true">
                 <form id="addpost" name="addpost" action="javascript:appendPost()">
                     <p>
-                        <label for="rssfeed">Upload your RSS Feed.</label>
+                        <label for="rssfeedadd" class="filebox">Upload your RSS Feed</label>
                         <input type="file" id="rssfeedadd" name="rssfeed" accept=".xml,.rss" required>
                     </p>
                     <p>

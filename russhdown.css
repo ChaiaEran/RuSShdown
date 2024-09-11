@@ -7,12 +7,24 @@ body {
     color: white;
     background: #191919;
     font-family: Atkinson Hyperlegible;
+    margin: auto;
+    overflow: auto;
 }
 
 .header {
     background: #83254f;
     margin: 0%;
-    padding: 1.5%;
+    width: 100%;
+    padding: 1rem;
+    background-clip: padding-box;
+}
+
+.infobox {
+    margin: 1%;
+    border: 1px solid #4a4847;
+    border-radius: 10px;
+    padding: 0.5%;
+    display: inline-block;
 }
 
 .tabs {
@@ -78,14 +90,33 @@ body {
 }
 
 input{
-    background: black;
+    background: #191919;
     color: white;
+    border: 1px solid #4a4847
+}
+
+input[type="file"]{
+    display: none;
+}
+
+.filebox{
+    color: black;
+    background: #e58f3e;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.filebox:hover{
+    background: #ffab5c;
 }
 
 textarea{
-    background: black;
+    background: #191919;
     color: white;
     resize: none;
+    border: 1px solid #4a4847
 }
 
 .flex {
@@ -95,7 +126,8 @@ textarea{
 }
 
 .preview {
-    border: 1px solid gray;
+    border: 1px solid #4a4847;
+    background: #191919;
     width: 25rem;
     height: 20rem;
     text-wrap: wrap;
