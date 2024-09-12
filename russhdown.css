@@ -36,7 +36,7 @@ body {
     text-align: left;
 }
 
-.tabs li {
+.tabs > li {
     float: left;
     display: block;
 }
