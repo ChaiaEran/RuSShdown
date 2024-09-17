@@ -3,7 +3,7 @@
 
 RuSShdown lets you make an RSS feed without touching a single line of code, with posts that support Markdown, like you'd make on cohost!
 
-RuSShdown works in your browser, uses absolutely no cookies, and runs 100% client-side. You can download the source code and pore through it yourself, if you'd like.
+RuSShdown works in your browser, uses absolutely no cookies &mdash; though it *does* use local storage to store your RSS feed for next time &mdash; and runs 100% client-side. You can download the source code and pore through it yourself, if you'd like.
 
 Try it out [here.](https://chaiaeran.github.io/RuSShdown/)
 
