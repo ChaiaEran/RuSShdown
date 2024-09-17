@@ -29,6 +29,8 @@ function generateNewFeed() {
     </channel>
     </rss>`
     xmlFile = new Blob([xmlText], { type: 'text/xml' })
+    localStorage.setItem("rssfeed", xmlText)
+    localStorage.setItem("filename", 'rss.xml')
     const elem = window.document.createElement('a');
     elem.href = window.URL.createObjectURL(xmlFile);
     elem.download = 'rss.xml';
@@ -65,6 +67,8 @@ function appendPost() {
         postEntry = rssFeed.slice(startIndex)
         xmlText = preEntry + newPostText + postEntry
         xmlFile = new Blob([xmlText], { type: 'text/xml' })
+        localStorage.setItem("rssfeed", xmlText)
+        localStorage.setItem("filename", rawFeed.name)
         const elem = window.document.createElement('a');
         elem.href = window.URL.createObjectURL(xmlFile);
         elem.download = rawFeed.name;
@@ -84,8 +88,21 @@ function previewText(textBox, previewBox, htmlBox) {
     output2.innerText = inputHtml
 }
 
+function checkLocalStorage(){
+    const rssFeed = localStorage.getItem("rssfeed")
+    const fileName = localStorage.getItem("filename")
+    const file = document.getElementById("rssfeedadd")
+    if(rssFeed !== null && fileName !== null && file.files.length === 0){
+        const rssFile = new File([rssFeed], fileName)
+        const dataTransfer = new DataTransfer()
+        dataTransfer.items.add(rssFile)
+        file.files = dataTransfer.files
+    }
+}
+
 function setFileName(){
     const file = document.getElementById("rssfeedadd")
     const filenameSpace = document.getElementById("filename")
-    filenameSpace.innerText = file.files[0].name
+    if(file.files.length !== 0)
+        filenameSpace.innerText = file.files[0].name
 }
