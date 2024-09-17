@@ -9,3 +9,4 @@ Try it out [here.](https://chaiaeran.github.io/RuSShdown/)
 
 Made by:   
 [![Chaia Eran: Cute as Hell, Queer AF](https://chaiaeran.neocities.org/imgs/chaia.png)](https://chaiaeran.neocities.org)
+[Viv Lim](https://wp.vivl.im/)
