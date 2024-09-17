@@ -168,8 +168,6 @@ async function appendPost() {
     populateElementFromForm(newFirstItem);
     channel.insertBefore(newFirstItem, existingFirstItem);
 
-    appendChildElement(channel, "item", populateElementFromForm);
-
     saveFeed(rssDoc, rawFeed.name);
 }
 
