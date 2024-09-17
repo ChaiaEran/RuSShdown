@@ -8,5 +8,4 @@ RuSShdown works in your browser, uses absolutely no cookies &mdash; though it *d
 Try it out [here.](https://chaiaeran.github.io/RuSShdown/)
 
 Made by:   
-[![Chaia Eran: Cute as Hell, Queer AF](https://chaiaeran.neocities.org/imgs/chaia.png)](https://chaiaeran.neocities.org)
-[Viv Lim](https://wp.vivl.im/)
+[![Chaia Eran: Cute as Hell, Queer AF](https://chaiaeran.neocities.org/imgs/chaia.png)](https://chaiaeran.neocities.org) &amp; [Viv Lim](https://wp.vivl.im/)
