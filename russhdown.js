@@ -104,7 +104,7 @@ function generateNewFeed() {
         e.setAttributeNode(attribute("version", "2.0"));
         e.setAttributeNode(attribute("xmlns:atom", "http://www.w3.org/2005/Atom"));
     });
-    let processingInstruction = rssDoc.createProcessingInstruction('xml', 'version="1.0" encoding="UTF8"');
+    let processingInstruction = rssDoc.createProcessingInstruction('xml', 'version="1.0" encoding="UTF-8"');
     rssDoc.insertBefore(processingInstruction, rssDoc.firstChild);
     let channel = appendChildElement(root, "channel");
 
