@@ -36,7 +36,7 @@ body {
     text-align: left;
 }
 
-.tabs > li {
+.tabs>li {
     float: left;
     display: block;
 }
@@ -89,18 +89,18 @@ body {
     display: block;
 }
 
-input{
+input {
     background: #191919;
     color: white;
     border: 1px solid #4a4847;
     font-family: Atkinson Hyperlegible;
 }
 
-input[type="file"]{
+input[type="file"] {
     display: none;
 }
 
-.filebox{
+.filebox {
     color: black;
     background: #e58f3e;
     border: none;
@@ -109,11 +109,11 @@ input[type="file"]{
     cursor: pointer;
 }
 
-.filebox:hover{
+.filebox:hover {
     background: #ffab5c;
 }
 
-textarea{
+textarea {
     background: #191919;
     color: white;
     resize: none;
@@ -136,13 +136,14 @@ textarea{
     overflow-y: scroll;
 }
 
-button{
+button {
     color: black;
     background: #e58f3e;
     border: none;
     border-radius: 10px;
     padding: 10px;
 }
-button:hover{
+
+button:hover {
     background: #ffab5c;
 }

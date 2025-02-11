@@ -4,7 +4,7 @@ var rssDoc = document.implementation.createDocument("", "", null);
 
 function attribute(aname, avalue, namespaceUri) {
     let a;
-    if (namespaceUri === undefined){
+    if (namespaceUri === undefined) {
         a = rssDoc.createAttribute(aname);
     }
     else {
@@ -16,13 +16,13 @@ function attribute(aname, avalue, namespaceUri) {
 
 function appendChildElement(parent, ename, eapply, namespaceUri) {
     let e;
-    if (namespaceUri === undefined){
+    if (namespaceUri === undefined) {
         e = rssDoc.createElement(ename);
     }
     else {
         e = rssDoc.createElementNS(namespaceUri, ename);
     }
-    if (eapply !== undefined){
+    if (eapply !== undefined) {
         eapply(e);
     }
     parent.appendChild(e);
@@ -67,12 +67,12 @@ function saveFeed(toSave, filename) {
     document.body.removeChild(elem);
 }
 
-function populateElementFromForm(item){
+function populateElementFromForm(item) {
     appendChildElement(item, "title", e => addCDATA(e, postTitle));
     appendChildElement(item, "pubDate", e => addCDATA(e, pubDate));
     appendChildElement(item, "description", e => addCDATA(e, postBody));
     appendChildElement(item, "author", e => addCDATA(e, postAuthor));
-    if (isLink){
+    if (isLink) {
         appendChildElement(item, "link", e => addCDATA(e, postLink));
         appendChildElement(item, "guid", e => addCDATA(e, postLink));
     } else {
@@ -160,7 +160,7 @@ async function appendPost() {
         throw new Error("Uploaded feed didn't contain a 'channel' element.")
     }
     let existingFirstItem = channel.querySelector("item");
-    if (!existingFirstItem){
+    if (!existingFirstItem) {
         throw new Error("Uploaded feed didn't contain any items.");
     }
 
@@ -180,36 +180,33 @@ function previewText(textBox, previewBox, htmlBox) {
     output2.innerText = inputHtml
 }
 
-function checkLocalStorage(){
+function checkLocalStorage() {
     const rssFeed = localStorage.getItem("rssfeed")
     const fileName = localStorage.getItem("filename")
     const file = document.getElementById("rssfeedadd")
-    if(rssFeed !== null && fileName !== null && file.files.length === 0){
-        tab1 = document.getElementById("tab1")
-        tab2 = document.getElementById("tab2")
-        tab1.checked = false
-        tab2.checked = true
+    if (rssFeed !== null && fileName !== null && file.files.length === 0) {
         const rssFile = new File([rssFeed], fileName)
         const dataTransfer = new DataTransfer()
         dataTransfer.items.add(rssFile)
         file.files = dataTransfer.files
-    }
+        return true
+    } else return false
 }
 
-async function setFileName(){
+async function setFileName() {
     const fileElement = document.getElementById("rssfeedadd")
     const filenameSpace = document.getElementById("filename")
-    if(fileElement.files.length !== 0){
+    if (fileElement.files.length !== 0) {
         let file = fileElement.files[0]
         filenameSpace.innerText = file.name
-        
+
         // Attempt to read the file, get the author from the most recent item, and populate the form with it.
         try {
             let uploadedRssDoc = await readRssFile(file);
             let existingFirstItem = uploadedRssDoc.querySelector("item");
             if (existingFirstItem) {
                 let existingAuthor = existingFirstItem.querySelector("author");
-                if (existingAuthor){
+                if (existingAuthor) {
                     document.getElementById("authoradd").value = existingAuthor.textContent.trim();
                 }
             }
