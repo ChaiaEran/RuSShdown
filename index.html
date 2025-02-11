@@ -98,7 +98,7 @@
         </li>
     </ul>
     <script>
-        const hasExisting = checkLocalStorage()
+        checkLocalStorage()
         setFileName()
         previewText('postnew', 'previewnew', 'htmlnew')
         previewText('postadd', 'previewadd', 'htmladd')
@@ -110,12 +110,6 @@
         var formattedDate = adjustedDate.toISOString().substring(0, 16);
         newDate.value = formattedDate
         addDate.value = formattedDate
-        if (hasExisting) {
-            tab1 = document.getElementById("tab1")
-            tab2 = document.getElementById("tab2")
-            tab1.checked = false
-            tab2.checked = true
-        }
     </script>
 </body>
 

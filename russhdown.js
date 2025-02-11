@@ -189,8 +189,9 @@ function checkLocalStorage() {
         const dataTransfer = new DataTransfer()
         dataTransfer.items.add(rssFile)
         file.files = dataTransfer.files
-        return true
-    } else return false
+        addTab = document.getElementById("tab2")
+        addTab.checked = true
+    }
 }
 
 async function setFileName() {
