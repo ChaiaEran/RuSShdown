@@ -185,6 +185,10 @@ function checkLocalStorage(){
     const fileName = localStorage.getItem("filename")
     const file = document.getElementById("rssfeedadd")
     if(rssFeed !== null && fileName !== null && file.files.length === 0){
+        tab1 = document.getElementById("tab1")
+        tab2 = document.getElementById("tab2")
+        tab1.checked = false
+        tab2.checked = true
         const rssFile = new File([rssFeed], fileName)
         const dataTransfer = new DataTransfer()
         dataTransfer.items.add(rssFile)
