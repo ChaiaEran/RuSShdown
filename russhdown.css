@@ -15,8 +15,11 @@ body {
     background: #83254f;
     margin: 0%;
     width: 100%;
+    padding: 0;
+}
+
+.image {
     padding: 1rem;
-    background-clip: padding-box;
 }
 
 .infobox {
@@ -28,7 +31,6 @@ body {
 }
 
 .tabs {
-    width: 100vw;
     float: none;
     list-style: none;
     position: relative;
